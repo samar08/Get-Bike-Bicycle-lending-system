@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:background="@drawable/rectangle"
+        android:id="@+id/relativeLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/custpic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="10dp"
+            android:background="@layout/layout_bg"
+            android:layout_marginTop="5dp" />
+        <RelativeLayout
+            android:id="@+id/det_layout"
+            android:layout_width="270dp"
+            android:layout_marginLeft="18dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/custpic"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cust_name"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/cust_name"
+                android:text="Accept"
+                android:background="@layout/roundborder"
+                android:backgroundTint="#008000"
+                android:textColor="#ffffff"
+                android:id="@+id/accept_reqbtn"
+                android:layout_marginRight="56dp"
+                />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/cust_name"
+                android:layout_toRightOf="@+id/accept_reqbtn"
+                android:text="reject"
+                android:id="@+id/rejectbtn"
+                android:background="@layout/roundborder"
+                android:backgroundTint="#ff0000"
+                android:textColor="#ffffff"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout8" />
+
+</android.support.constraint.ConstraintLayout>

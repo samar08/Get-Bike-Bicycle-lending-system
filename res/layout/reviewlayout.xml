@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/writereviewdisp"
+    android:text="Write a review"
+android:layout_centerHorizontal="true"
+    android:textSize="20sp"
+    android:textColor="@color/colorPrimary"
+
+    />
+<EditText
+    android:id="@+id/editreview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:hint="Review"
+    android:layout_marginTop="5dp"
+    android:layout_below="@+id/writereviewdisp"
+    />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelrebtn"
+            android:text="cancel"
+            android:layout_below="@+id/editreview"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/red"
+            android:textColor="#ffffff"
+            android:background="@layout/roundborder"
+            />
+        <Button
+            android:layout_toRightOf="@+id/cancelrebtn"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitrebtn"
+            android:text="Submit"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@layout/roundborder"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/green"
+
+            android:layout_below="@+id/editreview"
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

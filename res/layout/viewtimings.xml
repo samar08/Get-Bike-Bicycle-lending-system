@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginLeft="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lendtypeview"
+            android:text="Lend type: "
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lendtype"
+            android:layout_toRightOf="@+id/lendtypeview"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/redorange"
+           android:layout_marginLeft="10dp"
+            />
+        <RelativeLayout
+            android:id="@+id/dateslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lendtypeview"
+            android:layout_marginTop="8dp"
+            >
+            <RelativeLayout
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fromlayout5"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/from5"
+                    android:textColor="@color/colorPrimary"
+                    android:text="from"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromdate5"
+                    android:layout_below="@+id/from5"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromtime5"
+                    android:layout_below="@id/fromdate5"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_toRightOf="@+id/fromlayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/to5"
+                    android:text="to"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todate5"
+                    android:layout_below="@id/to5"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totime5"
+                    android:layout_below="@+id/todate5"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <TextView
+           android:layout_centerHorizontal="true"
+            android:layout_below="@+id/dateslayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price5"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="Price: "
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pricedisp5"
+            android:layout_toRightOf="@+id/price5"
+            android:layout_below="@id/dateslayout"
+            />
+       <Button
+           android:id="@+id/delavail"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Delete from available"
+           android:layout_below="@+id/pricedisp5"
+           android:layout_marginTop="15dp"
+           android:layout_centerHorizontal="true"
+           android:background="@layout/roundborder"
+           android:textColor="#ffffff"
+           android:backgroundTint="@color/red"
+           />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+android:background="@color/colorPrimary"
+android:id="@+id/profiletoolbar"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+
+android:layout_gravity="left"
+            android:id="@+id/backbtn"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="Profile"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</android.support.v7.widget.Toolbar>
+
+    <ImageView
+
+        android:id="@+id/profilepic"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
+
+    <RelativeLayout
+        android:background="@drawable/rectangle"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+<TextView
+    android:gravity="center"
+
+    android:textColor="@color/colorPrimary"
+    android:layout_width="200dp"
+    android:textSize="20sp"
+    android:padding="2dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/usernamedisp"
+    />
+        <TextView
+            android:gravity="center"
+
+            android:textColor="@color/colorPrimary"
+            android:layout_width="185dp"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/regdisp"
+            android:padding="2dp"
+          android:layout_toRightOf="@+id/usernamedisp"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="2dp"
+            android:layout_below="@+id/usernamedisp"
+            android:id="@+id/emaildisp"
+
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="2dp"
+            android:gravity="center"
+            android:layout_below="@+id/emaildisp"
+            android:id="@+id/mobiledisp"
+            />
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+
+            android:textColor="@color/colorPrimary"
+            android:padding="1.1dp"
+            android:layout_below="@+id/mobiledisp"
+            android:id="@+id/collegenamedisp"
+            />
+
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="2dp"
+            android:layout_below="@+id/collegenamedisp"
+android:id="@+id/blockdisp"
+            />
+        <ImageButton
+            android:layout_marginTop="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/edit"
+            android:id="@+id/editblock"
+            android:onClick="editblockclicked"
+            android:layout_toRightOf="@+id/blockdisp"
+            android:layout_below="@+id/collegenamedisp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/editblocklayout"
+            android:layout_below="@id/collegenamedisp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:layout_width="170dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/newblock"
+                android:hint="Block name"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:onClick="saveblockclicked"
+                android:backgroundTint="#008000"
+                android:background="@layout/roundborder"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancelblockclicked"
+                android:background="@layout/roundborder"
+                android:textColor="#ffffff"
+                android:backgroundTint="#FF0000"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editroomlayout"
+            android:layout_below="@+id/blockdisp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <EditText
+                android:layout_width="170dp"
+                android:textSize="20sp"
+                android:id="@+id/newroom"
+                android:hint="Room number"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:onClick="saveroomclicked"
+                android:backgroundTint="#008000"
+                android:background="@layout/roundborder"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancelroomclicked"
+                android:background="@layout/roundborder"
+                android:textColor="#ffffff"
+                android:backgroundTint="#FF0000"
+                />
+
+        </LinearLayout>
+        <TextView
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_below="@+id/blockdisp"
+            android:id="@+id/roomnumberdisp"
+            />
+        <ImageButton
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="editroomclicked"
+            android:background="@drawable/edit"
+            android:layout_toRightOf="@+id/roomnumberdisp"
+            android:layout_below="@+id/editblock"
+            android:id="@+id/editroomnumber"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/editprofilepicbtn"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:onClick="editpicclicked"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/editpic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilepic"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

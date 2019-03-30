@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/bikesbtn"
+            android:icon="@drawable/bicyclerider"
+            android:title="View available bikes" />
+
+        <item
+
+            android:id="@+id/putbikebtn"
+
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Add bike" />
+        <item
+            android:id="@+id/mybikebtn"
+            android:icon="@drawable/cycleicon"
+            android:title="My bikes" />
+        <item
+            android:id="@+id/ridesbtn"
+            android:icon="@drawable/r5"
+            android:title="My rides" />
+
+        <item android:id="@+id/bikehistory"
+            android:title="My bike's history"
+            android:icon="@drawable/bikehist"/>
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/cont"
+            android:iconTint="@color/green"
+            android:title="My profile" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

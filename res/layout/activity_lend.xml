@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LendActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/profiletoolbar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+
+                android:layout_gravity="left"
+                android:id="@+id/backbtn"
+android:visibility="invisible"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_revert" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="Lend bike"
+
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="160dp"
+
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profiletoolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/fromlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/selloptionlayout"
+            android:layout_marginTop="2dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textStyle="bold"
+
+                />
+
+            <ImageButton
+                android:id="@+id/fromdatebtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/from"
+                android:background="@drawable/date"
+                android:tooltipText="select date" />
+
+            <TextView
+                android:id="@+id/datedisp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/from"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/fromdatebtn"
+                android:gravity="center"
+                android:text="select date"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/fromtimebtn"
+                android:layout_width="35dp"
+
+                android:layout_height="35dp"
+                android:layout_below="@+id/from"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/datedisp"
+                android:background="@drawable/time" />
+
+            <TextView
+                android:id="@+id/timedisp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/from"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/fromtimebtn"
+                android:text="select time"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tolayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/fromlayout"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/todatebtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/to"
+                android:background="@drawable/date"
+                android:tooltipText="select date" />
+
+            <TextView
+                android:id="@+id/datedisp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/to"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/todatebtn"
+                android:gravity="center"
+                android:text="select date"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/totimebtn"
+                android:layout_width="35dp"
+
+                android:layout_height="35dp"
+                android:layout_below="@+id/to"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/datedisp2"
+                android:background="@drawable/time" />
+
+            <TextView
+                android:id="@+id/timedisp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/to"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/totimebtn"
+                android:text="select time"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/selloptionlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editdop"
+            android:layout_marginTop="0dp"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rent"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@layout/roundborder"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginRight="5dp"
+                android:onClick="rentclicked"
+                android:text="RENT"
+                android:textColor="#ffffff" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:text="Cycle id: "
+    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cid"
+
+                />
+            <Button
+                android:id="@+id/sell"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+android:layout_marginLeft="10dp"
+                android:background="@layout/roundborder"
+                android:backgroundTint="@color/colorAccent"
+                android:onClick="rentclicked"
+                android:text="sell"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:id="@+id/calpricebtn"
+            android:textSize="12sp"
+            android:text="calculate"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@layout/roundborder"
+            android:layout_below="@+id/tolayout"
+            />
+
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_toRightOf="@+id/calpricebtn"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tolayout"
+            android:layout_marginTop="10dp"
+            android:text="Price :"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pricedisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tolayout"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/price"
+            android:text="0 Rs."
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@layout/roundborder"
+            android:backgroundTint="#008000"
+            android:text="Upload"
+android:onClick="uploadclicked"
+            android:id="@+id/lendbtn"
+            android:layout_marginTop="18dp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/pricedisp"
+            android:layout_centerHorizontal="true"
+
+            />
+        <ProgressBar
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_below="@+id/price"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <!---!-->
+
+</android.support.constraint.ConstraintLayout>

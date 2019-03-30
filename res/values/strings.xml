@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GetBike</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">V8Cj7gOCerae9W2o6UoeWDBBRipuUPP0ld4eUW8F</string>
+    <string name="back4app_client_key">bzAOEwDUL2KxH4eIgQqt4hHY9LrzkEqtXuVUbAIR</string>
+    <string name="collegecondition">Please enter your college name correctly</string>
+    <string name="website"> https://www.shiksha.com</string>
+    <string name="emailrequest">Please provide the current Email that you are using</string>
+    <string name="mobilerequest">Please provide the current mobile number that you are using</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

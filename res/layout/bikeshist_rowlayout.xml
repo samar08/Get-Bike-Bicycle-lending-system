@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/pics_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bike_layout"
+                android:background="@layout/roundborder"
+                >
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:id="@+id/bikepic"
+                    android:layout_height="65dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:textSize="10sp"
+                    android:id="@+id/bikename2"
+                    android:layout_toRightOf="@+id/bikepic"
+                    />
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bikeid2"
+                    android:layout_toRightOf="@+id/bikepic"
+                    android:layout_below="@+id/bikename2"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ownerlayout"
+                android:layout_toRightOf="@+id/bike_layout"
+                android:background="@layout/roundborder"
+                >
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:id="@+id/ownerpic"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ownername"
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@+id/ownerpic"
+                    android:layout_marginLeft="0dp"
+                    />
+                <TextView
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ownerid"
+                    android:layout_toRightOf="@+id/ownerpic"
+                    android:layout_below="@+id/ownername"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pics_layout"
+            >
+            <RelativeLayout
+                android:id="@+id/fromlayout2"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromview"
+                    android:text="from"
+                    android:textColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_below="@+id/fromview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/fromdateview"
+                    />
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromtimeview"
+                    android:layout_below="@+id/fromdateview"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tolayout2"
+                android:layout_toRightOf="@+id/fromlayout2"
+                android:layout_marginLeft="120dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toview"
+                    android:text="to"
+                    android:textColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todateview"
+                    android:layout_below="@+id/toview"
+                    android:layout_marginTop="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totimeview"
+                    android:layout_below="@+id/todateview"
+                    android:layout_marginTop="3dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pricelayout2"
+            android:layout_below="@+id/date_layout"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/opricelayout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/priceview"
+                    android:text="Price: "
+                    android:textColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price2"
+                    android:layout_toRightOf="@+id/priceview"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/mobilelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pricelayout2"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer details: "
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:id="@+id/cust_details"
+                android:textColor="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobnum"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cust_details"
+                android:layout_marginLeft="40dp"
+                android:text="9100339285"
+                />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:focusable="false"
+                android:background="@drawable/whatsapplogo"
+                android:id="@+id/whatbtn"
+                android:layout_toRightOf="@+id/mobnum"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

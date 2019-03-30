@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:id="@+id/optionslayout"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toTopOf="@+id/availbikeslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/editdatebtn"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/date"
+            />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@layout/roundborder"
+    android:text="Apply"
+    android:backgroundTint="#008000"
+    android:layout_marginTop="5dp"
+    android:textSize="13sp"
+    android:textColor="#ffffff"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/editdatebtn"
+    android:id="@+id/applybtn"
+    />
+        <ProgressBar
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_below="@+id/editdatebtn"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateview"
+            android:text="select date"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/editdatebtn"
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radio"
+            android:layout_toRightOf="@+id/dateview"
+            android:layout_marginLeft="100dp"
+
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent"
+                android:checked="true"
+                android:onClick="checkbtn"
+                android:id="@+id/rentoption"
+                />
+            <RadioButton
+                android:onClick="checkbtn"
+                android:id="@+id/buyoption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ListView
+android:id="@+id/availbikeslist"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionslayout"></ListView>
+
+
+
+</android.support.constraint.ConstraintLayout>

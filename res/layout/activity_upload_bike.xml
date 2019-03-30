@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UploadBike">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/profiletoolbar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+
+                android:layout_gravity="left"
+                android:id="@+id/backbtn"
+
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_revert" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="Add bike"
+
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/cycleimgid"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/editcycbtn"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/editpic"
+        android:onClick="editcycclicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/cycleimgid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/cycname"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="Name of the bike"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/dopdisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cycname"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Date of purchase" />
+
+        <ImageButton
+            android:id="@+id/editdop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/cycname"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dopdisp"
+            android:background="@drawable/date"
+
+            />
+
+        <EditText
+            android:id="@+id/cycprice"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/cycname"
+            android:hint="Original Price in Rs."
+            android:inputType="number"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/cycid"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editdop"
+            android:layout_marginLeft="80dp"
+            android:text="Cycle id:"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycleid2"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/editdop"
+            android:layout_toRightOf="@+id/cycid"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycleid"
+android:layout_below="@+id/editdop"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/cycleid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="62dp"
+           android:layout_marginTop="30dp"
+            android:background="@layout/roundborder"
+            android:backgroundTint="#008000"
+            android:text="Add"
+            android:id="@+id/addbtn"
+            android:onClick="addclicked"
+            android:textColor="#ffffff" />
+
+        <ProgressBar
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_below="@+id/addbtn"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+             />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="84dp"
+android:background="@drawable/rectangle"
+    >
+    <ImageView
+        android:layout_width="80dp"
+        android:id="@+id/mycycdisp"
+        android:layout_height="78dp" />
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="280dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/mycycdisp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycnamedisp"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cyciddisp"
+            android:textSize="15sp"
+            android:layout_below="@+id/cycnamedisp"
+            android:layout_marginTop="5dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View requests"
+            android:id="@+id/viewreqbtn"
+            android:textSize="13sp"
+            android:focusable="false"
+            android:backgroundTint="#008000"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_below="@+id/cyciddisp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:focusable="false"
+            android:backgroundTint="#FF0000"
+            android:text="delete"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/deletelistbtn"
+            android:layout_below="@+id/cyciddisp"
+           android:layout_marginStart="188dp"
+            />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/status"
+
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:layout_toRightOf="@+id/viewreqbtn"
+    android:layout_marginLeft="56dp"
+    />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/content"/>
+
+</RelativeLayout>
